@@ -43,3 +43,6 @@ wheels/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# chroma db
+/project/chroma_db_test/*

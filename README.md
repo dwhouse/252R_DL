@@ -1,224 +1,99 @@
-# 252R Deep Learning Course - LlamaIndex & RAG
+# 252R 딥러닝응용 (LlamaIndex · RAG)
 
-A comprehensive learning repository for LlamaIndex and Retrieval-Augmented Generation (RAG) systems.
+이 레포는 **252R 딥러닝응용 수업 실습**(Chapter 1~10)과, **2025-2학기 딥러닝응용 프로젝트**(RAG 기반 학칙/학사운영 규정 Q&A)를 함께 관리합니다.
 
-## Weekly Progress
+- `practice/`: Chapter별 실습 노트북/코드
+- `theory/`: 이론 자료(PDF) 및 노트북
+- `project/`: 학칙 PDF 기반 RAG 질의응답 프로젝트(ChromaDB + LlamaIndex)
+- `dla/`: `uv` 기반 파이썬 환경(의존성 묶음)
 
-| Week | Topic | Status | Notes |
-|------|-------|--------|-------|
-| 1 | Introduction to LlamaIndex | 🔄 In Progress | Setup & Basic Usage |
-| 2 | LlamaIndex Pipeline | ⏳ Upcoming | Data Loading, Chunking, Indexing |
-| 3 | Vector Stores | ⏳ Upcoming | Chroma, Pinecone, Qdrant |
-| 4 | Text Document RAG | ⏳ Upcoming | PDF, TXT, CSV, HWP |
-| 5 | Multimodal RAG | ⏳ Upcoming | Images & Text |
-| 6 | Agent RAG | ⏳ Upcoming | Building Intelligent Agents |
-| 7 | Advanced RAG | ⏳ Upcoming | ReRanking, HyDE |
-| 8 | Function Calling Agents | ⏳ Upcoming | External API Integration |
-| 9 | Text-to-SQL Agent | ⏳ Upcoming | Database Query Agent |
-| 10 | Model Context Protocol (MCP) | ⏳ Upcoming | MCP Server & Client |
+## Chapter 별 실습 내용
 
----
+| Chapter | 주제 | 주요 파일/폴더 | 간단 요약 |
+|---:|---|---|---|
+| 1 | LlamaIndex 입문 | `practice/ch01/starter.ipynb` | 기본 개념/설치/첫 실행 |
+| 2 | RAG 파이프라인 | `practice/ch02/ch02_practice.ipynb` | 로딩→청킹→인덱싱→질의 흐름 |
+| 3 | 벡터DB/저장소 | `practice/ch03/01_chroma_example.ipynb` | Chroma/Pinecone/Qdrant 비교 실습 |
+| 4 | 문서 RAG(PDF 등) | `practice/ch04/ch04_practice.ipynb` | PDF 기반 RAG 기본기 |
+| 5 | 멀티모달 RAG | `practice/ch05/multimodal_rag.ipynb` | 텍스트+이미지 검색/질의 |
+| 6 | Agentic RAG | `practice/ch06/ch06_agentic_rag.ipynb` | 에이전트 구성 및 도구 활용 |
+| 7 | Advanced RAG | `practice/ch07/ch07_advanced_rag.ipynb` | Reranking/HyDE 등 고급 기법 |
+| 8 | Function Calling | `practice/ch08/ch08_practice.ipynb` | 외부 도구 호출 기반 에이전트 |
+| 9 | Text-to-SQL | `practice/ch09/ch09_text_to_sql.ipynb` | 자연어→SQL 질의 에이전트 |
+| 10 | MCP | `practice/ch10/server.py` | MCP 서버/클라이언트 및 예제 |
 
-## Chapter 1: Introduction to LlamaIndex
+요약: 1~4장은 “문서→벡터→검색→답변” RAG 기본기를 다지고, 5~10장은 멀티모달/에이전트/고급 검색/툴링(MCP)까지 확장합니다.
 
-- [ ] Understand what LlamaIndex supports
-- [ ] Set up Python development environment
-  - [ ] Install Python on Windows
-  - [ ] Create virtual environment
-  - [ ] Install Visual Studio Code
-- [ ] Obtain API keys
-  - [ ] OpenAI API key
-  - [ ] Gemini API key
-  - [ ] Add API keys to environment variables
-- [ ] First LlamaIndex experience
-  - [ ] Prepare sample data
-  - [ ] Install LlamaIndex in virtual environment
-  - [ ] Run first LlamaIndex application
+## 레포 구조
 
-## Chapter 2: LlamaIndex Pipeline
-
-- [ ] Set up development environment
-- [ ] Data Loading
-  - [ ] Understand Data Readers
-  - [ ] Learn about Data Connectors
-- [ ] Text Chunking
-  - [ ] Understand Documents and Nodes
-  - [ ] Token-based splitting
-  - [ ] Sentence-based splitting
-  - [ ] Semantic splitting
-  - [ ] Compare chunking strategies
-- [ ] Indexing
-  - [ ] What is indexing?
-  - [ ] Vector Store Index
-  - [ ] Top-K retrieval
-- [ ] Persistence (Saving indexes)
-- [ ] Querying
-  - [ ] QueryEngine
-  - [ ] Retrieval
-  - [ ] Postprocessing
-  - [ ] Response synthesis
-  - [ ] Customization
-
-## Chapter 3: Vector Stores
-
-- [ ] Set up development environment
-- [ ] Chroma
-  - [ ] Create Chroma client
-  - [ ] Create collections
-  - [ ] Add vector data
-  - [ ] Vector search
-  - [ ] Metadata filtering
-  - [ ] Add embedding data
-  - [ ] Search embedding data
-  - [ ] Understand Chroma storage
-  - [ ] Generate responses with embeddings
-  - [ ] Generate responses with LlamaIndex
-- [ ] Pinecone
-  - [ ] Initialize Pinecone API
-  - [ ] Add vector data
-  - [ ] Vector search
-  - [ ] Metadata filtering
-  - [ ] Generate responses with embeddings
-  - [ ] Generate responses without explicit embeddings
-- [ ] Qdrant
-  - [ ] Generate responses with LlamaIndex
-  - [ ] Set up local environment with Docker
-  - [ ] Set up cloud-based environment
-
-## Chapter 4: Text Document RAG
-
-- [ ] Set up development environment
-- [ ] Prepare practice data
-- [ ] Working with PDF files
-  - [ ] Prepare data
-  - [ ] Text chunking
-  - [ ] Indexing
-  - [ ] Execute queries
-- [ ] Working with text files
-  - [ ] Basic RAG practice
-  - [ ] Save index using Chroma
-- [ ] Working with CSV files
-- [ ] Working with HWP files
-  - [ ] Use HWPReader
-  - [ ] Use SimpleDirectoryReader
-
-## Chapter 5: Multimodal RAG
-
-- [ ] Set up development environment
-- [ ] Prepare data
-- [ ] Multimodal vector indexing with OpenAI API
-- [ ] Build multimodal RAG with Qdrant
-  - [ ] Install Qdrant and set up client
-  - [ ] Create text and image vector stores
-  - [ ] Create multimodal vector index
-  - [ ] Perform retrieval
-- [ ] Build Q&A-based RAG system
-  - [ ] Execute basic queries
-  - [ ] Execute queries with improved prompts
-- [ ] Build image-based RAG system
-  - [ ] Download and save new images
-  - [ ] Perform image search
-  - [ ] Analyze images with similar styles
-
-## Chapter 6: Agent RAG
-
-- [ ] Set up development environment
-- [ ] Prepare data
-- [ ] Use HuggingFace embeddings
-- [ ] Create agents
-
-## Chapter 7: Advanced RAG
-
-- [ ] Set up development environment
-- [ ] ReRanking
-  - [ ] LLM-based reranking
-- [ ] Address cost issues with LLM-based reranking
-  - [ ] Cross-encoder based reranking
-- [ ] HyDE (Hypothetical Document Embeddings)
-  - [ ] Prepare data
-  - [ ] Configure LLM and embeddings
-  - [ ] Implement HyDE
-
-## Chapter 8: Function Calling Agents
-
-- [ ] Set up development environment
-- [ ] Understand how function calling works
-- [ ] Function calling with external APIs
-  - [ ] Create stock market information agent
-  - [ ] Prepare function calling tools
-  - [ ] Create agent and execute queries
-- [ ] RAG agent with function calling
-  - [ ] Set up environment and prepare data
-  - [ ] Prepare function calling tools
-  - [ ] Create agent and execute queries
-
-## Chapter 9: Text-to-SQL Consultant Agent
-
-- [ ] Set up development environment
-- [ ] Set up environment for agent development
-- [ ] Design hospital database
-- [ ] Implement Text-to-SQL agent
-- [ ] Multi-turn conversation handling
-- [ ] Build user interface with Gradio
-
-## Chapter 10: Model Context Protocol (MCP)
-
-- [ ] Understand what MCP is
-- [ ] Set up MCP development environment
-- [ ] MCP Server
-  - [ ] Register tools using Adapter
-  - [ ] MCP Inspector
-  - [ ] Message format
-  - [ ] Document search agent MCP practice
-- [ ] MCP Client
-- [ ] Weather agent practice
-  - [ ] Obtain OpenWeatherMap API key
-  - [ ] Extract city names
-  - [ ] Integrate OpenWeatherMap API
-  - [ ] Register MCP tools and run server
-  - [ ] Implement MCP client for weather queries
-  - [ ] Summary and wrap-up
-
----
-
-## Resources
-
-- **Course Materials**: [Add link]
-- **Recommended Reading**: 
-  - LlamaIndex Official Documentation
-  - RAG Best Practices
-  - Vector Database Comparison Guide
-- **Frameworks**: LlamaIndex, OpenAI, HuggingFace, Gradio
-
-## Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/dwhouse/252R_DL.git
-cd 252R_DL
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
+```text
+.
+├── practice/              # Chapter별 실습(노트북/스크립트/샘플 데이터)
+├── theory/                # Transformer/LLM 등 이론 자료
+├── project/               # 2025-2 프로젝트: 학칙 PDF RAG Q&A
+│   ├── data/              # 제공 PDF(7개) — 이 폴더의 PDF만 사용
+│   ├── main.py            # 제출 파일(단일 파일)
+│   ├── test/              # 예시 queries/outputs
+│   └── chroma_db_test/    # (--save) 실행 시 생성/갱신
+└── dla/                   # uv 환경(의존성)
 ```
 
-## API Keys Required
+## 실행/개발 환경
 
-- OpenAI API Key
-- Google Gemini API Key
-- Pinecone API Key (for Chapter 3)
-- OpenWeatherMap API Key (for Chapter 10)
+- Python 3.10+ 권장
+- 의존성 설치(권장: `uv`): `dla/`는 LlamaIndex/Chroma/Jupyter 등을 포함한 실습용 환경입니다.
 
-Store these in a `.env` file:
 ```bash
-OPENAI_API_KEY=your_openai_key
-GOOGLE_API_KEY=your_gemini_key
-PINECONE_API_KEY=your_pinecone_key
-OPENWEATHER_API_KEY=your_openweather_key
+cd dla
+uv sync
+source .venv/bin/activate
 ```
+
+## 환경 변수(.env)
+
+프로젝트/실습에서 API 키는 루트의 `.env`를 사용합니다.
+
+```bash
+OPENAI_API_KEY=...
+
+# (선택) 실습/확장에 따라 필요
+GOOGLE_API_KEY=...
+PINECONE_API_KEY=...
+OPENWEATHER_API_KEY=...
+```
+
+## 2025-2학기 딥러닝응용 프로젝트
+
+고려대학교 **학칙 및 학사운영 규정 PDF**를 기반으로, 규정 관련 질문에 자동 응답하는 **RAG 기반 질의응답 시스템(챗봇)** 구현이 목표입니다.
+
+### 개요(파이프라인)
+
+1. `--save`: PDF 로드 → 문단/청크 분할 → 임베딩 생성(OpenAI) → ChromaDB 저장  
+2. `--infer`: `queries.json` 입력 → ChromaDB 검색(근거 문단) → LLM 답변 생성 → `outputs.json` 저장
+
+`outputs.json`에는 `id`, `question`, `answer`(A/B/C/D), `elapsed_sec`, `citations`(참고근거) 를 포함합니다.
+
+### 실행 방법
+
+`project/` 폴더에서 실행해야 경로가 맞습니다.
+
+```bash
+cd project
+
+# 1) ChromaDB 생성/갱신
+python main.py --save
+
+# 2) 질의응답 수행
+python main.py --infer test/queries.json test/outputs.json
+```
+
+### 제출/평가 메모
+
+- 마감: 2025년 12월 19일(금) 23:59
+- 제출: `project/main.py` (단일 파일)
+- 실행: `--save`, `--infer` 모두 오류 없이 동작해야 함
+- 평가: 테스트 쿼리 → `outputs.json`의 `"answer"`(A/B/C/D) 정답률 비교
+- 구현 제한: 과제 안내에 따라 `save_to_chroma()`, `infer()` 외 수정 금지(자세한 주석 참고)
 
 ## License
 
